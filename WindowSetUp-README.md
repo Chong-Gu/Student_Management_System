@@ -1,4 +1,4 @@
-# Windows Aparche PHP mysql setup
+# Windows Apache PHP mysql setup
 1. download Aparche from https://www.apachelounge.com/download/
 2. copy the folder Aparche24 from the downloaded zip into C drive C:\
 3. download and install visual c++ redistribute for visual studio 2015 

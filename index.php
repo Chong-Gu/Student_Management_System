@@ -1,6 +1,7 @@
 <?php
     include "database.php";
     session_start();
+    
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +29,10 @@
                         }else{
                             echo "<div class='error'>Invalid Username or Password</div>";
                         }
+
+                    }
+                    if(isset($_GET["mes"])){
+                        echo "<div class='error'> {$_GET["mes"]} </div>";
                     }
                 ?>
                 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">

@@ -34,6 +34,11 @@
                         }
                     }
                 
+                    if(isset($_GET["mes"]))
+                    {
+                        echo "<div class='error'>{$_GET["mes"]}</div>";
+                    }
+                
                 ?>
                 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
                     <label>User Name</label><br>

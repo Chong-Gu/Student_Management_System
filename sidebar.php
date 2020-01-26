@@ -8,6 +8,7 @@
     <li class="li"><a href="add_staff.php">Staff</a></li>
     <li class="li"><a href="view_staff.php">View Staff</a></li>
     <li class="li"><a href="set_exam.php">Set Exam</a></li>
+    <li class="li"><a href="view_exam.php">View Exam</a></li>
     <li class="li"><a href=""> View Student </a></li>
     <li class="li"><a href="logout.php">Logout </a></li>
 </ul>

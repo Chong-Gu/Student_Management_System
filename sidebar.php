@@ -3,7 +3,7 @@
 <ul class="s">
     <li class="li"><a href="admin_home.php">School Information</a></li>
     <li class="li"><a href="add_class.php">Class</a></li>
-    <li class="li"><a href="=add_sub.php">Subject</a></li>
+    <li class="li"><a href="add_sub.php">Subject</a></li>
     
     <li class="li"><a href="add_staff.php">Staff</a></li>
     <li class="li"><a href="view_staff.php">View Staff</a></li>

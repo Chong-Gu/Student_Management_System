@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<?php include"navbar.php";?><br>
+<!--		<?php include"navbar.php";?><br>-->
 		<img src="img/1.jpg" style="margin-left:90px;" class="sha">
 			<div id="section">
 				<?php include"sidebar.php";?><br>
@@ -105,7 +105,7 @@
                                             <td>{$i}</td>
                                             <td>{$r["CNAME"]}</td>
                                             <td>{$r["CSEC"]}</td>
-                                            <td><a href='' class='btnr'>Delet</td>
+                                            <td><a href='delete.php?id={$r["CID"]}' class='btnr'>Delete</a></td>
                                         </tr>
                                         ";
                                 }

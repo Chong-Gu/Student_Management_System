@@ -27,7 +27,7 @@
 			<li class="li"><a href="add_stud.php"> Students</a></li>
 			<li class="li"><a href="view_stud_teach.php" target="_blank"> View Student</a></li>
 
-			<li class="li"><a href="tech_view_exam.php">View Exam</a></li>
+			<li class="li"><a href="teach_view_exam.php">View Exam</a></li>
 			<li class="li"><a href="add_mark.php">Add Marks</a></li>
 			<li class="li"><a href="view_mark.php">View Marks</a></li>
 			<li class="li"><a href="logout.php">Logout</a></li>

@@ -2,7 +2,7 @@
     include "database.php";
     session_start();
     if(!isset($_SESSION["TID"])){
-		echo"<script>window.open('teacher_home.php?mes=Access Denied...','_self');</script>";
+		echo"<script>window.open('teacher_login.php?mes=Access Denied...','_self');</script>";
 	}	
 
 $sql = "SELECT * FROM staff where TID = {$_SESSION["TID"]}";

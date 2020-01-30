@@ -1,16 +1,22 @@
 <?php
     include "database.php";
     session_start();
+    if(!isset($_SESSION["AID"])){
+		echo"<script>window.open('index.php?mes=Access Denied...','_self');</script>";
+	}	
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>change password</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         
     </head>
     <body>
+        <?php include "navbar.php";?>
         <div id="section">
-            <h3 class="text">Welcome <?php echo $_SESSION["ANAME"]; ?></h3><hr>
+        <?php include "sidebar.php";?>
+            
             <?php
             if(isset($_POST["submit"])){
                 $sql = "select * from admin where APASS='{$_POST["opass"]}' and AID='{$_SESSION["AID"]}'";
@@ -28,8 +34,8 @@
                 }
             }
             ?>
-        </div>
         <div class="content1">
+            <h3 class="text">Welcome <?php echo $_SESSION["ANAME"]; ?></h3><br><hr><br>
             <h3>Change Password</h3><br>
 
             <form method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
@@ -41,6 +47,7 @@
                 <input type="text" class="input3" name="cpass"><br>
                 <button type="submit" class="btn" name="submit">Change Password</button>
             </form>
+        </div>
         </div>
     </body>
 </html>

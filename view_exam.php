@@ -1,21 +1,24 @@
 <?php
     include "database.php";
     session_start();
+    if(!isset($_SESSION["AID"])){
+		echo"<script>window.open('index.php?mes=Access Denied...','_self');</script>";
+	}	
 
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>View Exam</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
     </head>
     <body>
+        <?php include"navbar.php";?>
         <div id="section">
-            <?php include "sidebar.php"; ?> <br><br>
-            <h3 class="text">Welcome <?php echo $_SESSION["ANAME"];?></h3><br><hr><br>
-
-        </div>
+            <?php include "sidebar.php"; ?> 
         <div class="content">
+            <h3 class="text">Welcome <?php echo $_SESSION["ANAME"];?></h3><br><hr><br>
             <h3> View Exam Time Table Details</h3><br>
             <?php 
                 if(isset($_GET["mes"])){
@@ -62,6 +65,7 @@
 
                 ?>
             </table>
+        </div>
         </div>
     </body>
 </html>

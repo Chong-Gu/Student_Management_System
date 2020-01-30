@@ -1,16 +1,22 @@
 <?php
     include "database.php";
     session_start();
+    if(!isset($_SESSION["AID"])){
+		echo"<script>window.open('index.php?mes=Access Denied...','_self');</script>";
+	}	
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Set Exam</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+        <?php include"navbar.php";?>
         <div id="section">
-            <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"];?></h3><br><hr>
+            <?php include"sidebar.php";?>
             <div class="content">
+            <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"];?></h3><br><hr><br>
                 <h3> Set Exam Time Table Details</h3><br>
                 <?php
                     if(isset($_POST["submit"])){
@@ -35,7 +41,7 @@
                                 <option value="III-Term">III-Term</option>
                             </select>
                         <br><br>
-                        <label>Exam Date</label>
+                        <label>Exam Date</label><br>
                             <select name="da" class="input5">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -116,7 +122,7 @@
                                 <option value="AN">AN</option>
                             </select>
                         <br><br>
-                        <label>Class</label>
+                        <label>Class</label><br>
                             <select name="cla" class="input3" required>
                             <?php
                                     $sl = "select DISTINCT(CNAME) from class";

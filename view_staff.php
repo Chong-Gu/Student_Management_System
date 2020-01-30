@@ -1,6 +1,9 @@
 <?php
     include "database.php";
     session_start();
+    if(!isset($_SESSION["AID"])){
+		echo"<script>window.open('index.php?mes=Access Denied...','_self');</script>";
+	}	
 
 ?>
 
@@ -8,15 +11,14 @@
 <html>
     <head>
         <title>Staff INFO</title>
-        
-    </head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
     <body>
-        
+        <?php include"navbar.php";?>
         <div id="section">
             <?php include "sidebar.php" ?>
-			<br><br><br>
-            <h3 class="text">Welcome <?php echo $_SESSION["ANAME"]; ?> </h3> <br><hr><br>
             <div class="content1"> 
+                <h3 class="text">Welcome <?php echo $_SESSION["ANAME"]; ?> </h3> <br><hr><br>
                 <h3> View Staff Details</h3>
                 <form id="frm" autocomplete="off">
                     <input type="text" id="txt" class="input">

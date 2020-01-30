@@ -1,10 +1,9 @@
 <?php
     include "database.php";
     session_start();
-    echo $_SESSION["AID"];
     if(!isset($_SESSION["AID"])){
         echo "<script>window.open('index.php?mes=Access Denied..', '_self');</script>";
-}
+    }
 ?>
 <!DOCTYPE html>
 
@@ -15,12 +14,12 @@
     </head>
 
     <body>
-        <?php #include "navbar.php"; ?>
-        <!-- <img src="img/1.jpg> style="margin-left:90px;" class="sha"> -->
+        <?php include "navbar.php"; ?>
+        
         <div id="section">
             <?php include "sidebar.php"; ?>
             <div class="content">
-                <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"]; ?> </h3> <br><br><br>
+            <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"]; ?> </h3> <br><hr><br>
             <h3> School information </h3> <br>
             <!-- img src="img/home.jpg" class="imgs"-->
 

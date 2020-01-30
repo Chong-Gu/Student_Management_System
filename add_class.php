@@ -1,20 +1,25 @@
 <?php 
     include "database.php";
     session_start();
-    if(!isset($_SESSION["AID"]))
-	{
+    if(!isset($_SESSION["AID"])){
 		echo"<script>window.open('index.php?mes=Access Denied...','_self');</script>";
-		
 	}	
 ?>  
 
 
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Add Class</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <?php include"navbar.php";?>
         <div id="section">
-            <?php include "sidebar.php"; ?> <br>
-            <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"]; ?> </h3><br><hr><br>
+            <?php include "sidebar.php"; ?>
+            
             <div class="content1">
+                <h3 class="text"> Welcome <?php echo $_SESSION["ANAME"]; ?> </h3><br><hr><br>
                 <h3> Add Class Details </h3><br>
                 <?php 
                     if(isset($_POST["submit"])){
@@ -42,8 +47,8 @@
                             <option value="IX"> IX </option>
                             <option value="X"> X </option>
 
-                        </select>
-                        <label> Section </label>
+                        </select><br>
+                        <label> Section </label><br>    
                         <select name="sec" required class="input2">
                             <option value="">Select</option>
                             <option value="-">-</option>
@@ -92,6 +97,8 @@
                             }   
                         ?>
                     </table>
+                    </div>
                 </div>
-
+            </div>
+    </body>
 </html>

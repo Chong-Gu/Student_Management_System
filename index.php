@@ -8,11 +8,10 @@
 <html>
     <head>
         <title> School Management System</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-
-    <body>
-        <?php include "navbar.php";?>
-        
+    <body class="back">
+        <?php include "navbar.php";?><br>
         <div class="login">
             <h1 class="heading">Admin Login</h1>
             <div class="log">
@@ -36,10 +35,10 @@
                     }
                 ?>
                 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-                    <label>User Name </label><br>
-                    <input type="text" name="aname" required class="input"><br><br>
-                    <label>Password </label><br>
-                    <input type="password" name="apass" required class="input"><br>
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="aname" required class="input" placeholder="Username"><br><br>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="apass" required class="input" placeholder="Password"><br>
                     <button type="submit" name="login" class="btn"> Login Here </button>
                 </form>
             </div>
